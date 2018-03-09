@@ -1,0 +1,16 @@
+{
+  "Comment": "sns -> elasticsearch",
+  "StartAt": "store-raw-tweets",
+  "States": {
+    "store-raw-tweets": {
+      "Type": "Task",
+      "Resource": $STORE_RAW_TWEET_ARN,
+      "Next": "transform-tweets"
+    },
+    "transform-tweets": {
+      "Type": "Task",
+      "Resource": $TRANSFORM_TWEET_ARN,
+      "End": true
+    }
+  }
+}

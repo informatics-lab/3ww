@@ -1,0 +1,4 @@
+.idea
+*.credentials*
+*node_modules*
+*3ww-hack*
